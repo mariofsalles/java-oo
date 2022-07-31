@@ -3,7 +3,8 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import util.Calculator;
+import util.CurrencyConverter;
+
 
 public class Program {
 
@@ -15,12 +16,13 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 
 		
-		System.out.print("Enter with the radius: ");
-		double radius = sc.nextDouble();
+		System.out.print("What is the dollar price: ");
+		CurrencyConverter.DOLLAR = sc.nextDouble();
 
-		System.out.printf("\nThe circunference area is %.2f\n", Calculator.circunference(radius));
-		System.out.printf("The circunference volume is %.2f\n", Calculator.volume(radius));
-		System.out.printf("The PI value is %.2f\n", Calculator.PI);
+		System.out.printf("How many dollars wil be bought? ");
+		double qty = sc.nextDouble();
+
+		System.out.printf("Amount to be paid in reais = %.2f\n", CurrencyConverter.amountToPaid(qty));
 
 		sc.close();
 
