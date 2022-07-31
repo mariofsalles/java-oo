@@ -21,7 +21,13 @@ public class Program {
 		double price = sc.nextDouble();
 
 		Product p1 = new Product(name, price);
-
+		
+		p1.setName("Computer");
+		System.out.printf("\nUpdated name: %s", p1.getName());
+		p1.setPrice(1200);
+		System.out.printf("\nUpdated price: %.2f", p1.getPrice());
+		
+		
 		System.out.println();
 		System.out.println(p1);
 		System.out.println();
