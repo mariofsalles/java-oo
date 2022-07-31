@@ -20,26 +20,29 @@ public class Program {
 		System.out.print("Preço: ");
 		double price = sc.nextDouble();
 
-		System.out.print("Quantidade: ");
-		int quantity = sc.nextInt();
-
-		Product p1 = new Product(name, price, quantity);
-
+		Product p1 = new Product(name, price);
+		
+		p1.setName("Computer");
+		System.out.printf("\nUpdated name: %s", p1.getName());
+		p1.setPrice(1200);
+		System.out.printf("\nUpdated price: %.2f", p1.getPrice());
+		
+		
 		System.out.println();
 		System.out.println(p1);
 		System.out.println();
 
 		System.out.print("Entre com o número de produtos a ser adicionado no estoque: ");
-		int addQty = sc.nextInt();
-		p1.addQuantity(addQty);
+		int qty = sc.nextInt();
+		p1.addQuantity(qty);
 
 		System.out.println();
 		System.out.println(p1);
 		System.out.println();
 
 		System.out.print("Entre com o número de produtos a ser removidos do estoque: ");
-		int remQty = sc.nextInt();
-		p1.removeQuantity(remQty);
+		qty = sc.nextInt();
+		p1.removeQuantity(qty);
 
 		System.out.println();
 		System.out.println(p1);
