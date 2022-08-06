@@ -3,6 +3,8 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.Product;
+
 public class Program {
 
 	public static void main(String[] args) {
@@ -12,15 +14,30 @@ public class Program {
 
 		int n = sc.nextInt();
 
-		double[] vect = new double[n];
+		//// tipo referencia:
+		Product[] vect = new Product[n];
 
 		double soma = 0;
-		for (int i = 0; i < n; i++) {
-			vect[i] = sc.nextDouble();
-			soma += vect[i];
+		for (int i = 0; i < vect.length; i++) {
+			String name = sc.nextLine();			
+			double price = sc.nextDouble();			
+			sc.nextLine();			
+			vect[i] = new Product(name, price);
+			soma += vect[i].getPrice();
 		}
 
-		System.out.printf("AVERAGE HEIGTH = %.2f", soma / vect.length);
+		System.out.printf("AVERAGE PRICE = %.2f", soma / vect.length);
+		
+////      tipo valor:
+//		double[] vect = new double[n];
+//
+//		double soma = 0;
+//		for (int i = 0; i < vect.length; i++) {
+//			vect[i] = sc.nextDouble();
+//			soma += vect[i];
+//		}
+//
+//		System.out.printf("AVERAGE HEIGTH = %.2f", soma / vect.length);
 
 		sc.close();
 	}
