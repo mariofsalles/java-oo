@@ -4,17 +4,17 @@ public class Account {
 
 	private int accountNumber;
 	private String holder;
-	private float balance;
-
+	private double balance;
+	
 	public Account(int accountNumber, String holder) {
 		this.accountNumber = accountNumber;
 		this.holder = holder;
 	}
-
-	public Account(int accountNumber, String holder, float balance) {
+	
+	public Account(int accountNumber, String holder, double initial) {
 		this.accountNumber = accountNumber;
 		this.holder = holder;
-		this.balance = balance;
+		deposit(initial);
 	}
 
 	public String getHolder() {
@@ -25,20 +25,26 @@ public class Account {
 		this.holder = holder;
 	}
 
-	public float getBalance() {
+	public double getBalance() {
 		return balance;
-	}
-
-	public void setBalance(float balance) {
-		this.balance = balance;
 	}
 
 	public int getAccountNumber() {
 		return accountNumber;
 	}
+		
+	public void deposit(double money) {
+		balance += money;
+	}
+	
+	public void withdraw(double money) {
+		balance -= money + 5;
+	}
 
 	public String toString() {
-		return "Account " + accountNumber + ", Holder: " + holder + ", Balance: " + balance;
+		return "Account " + accountNumber + ", "
+				+ "Holder: " + holder + ", "
+				+ "Balance: $" + String.format("%.2f",balance);
 	}
 
 }
