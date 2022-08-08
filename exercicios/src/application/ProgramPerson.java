@@ -3,9 +3,9 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Pessoa;
+import entities.Person;
 
-public class ProgramPessoa {
+public class ProgramPerson {
 
 	public static void main(String[] args) {
 
@@ -16,7 +16,7 @@ public class ProgramPessoa {
 		int n = sc.nextInt();
 		sc.nextLine();
 
-		Pessoa[] vetPessoa = new Pessoa[n];
+		Person[] vetPessoa = new Person[n];
 
 		double soma = 0;
 		String pessoasMenoresDezesseis = "";
@@ -31,7 +31,7 @@ public class ProgramPessoa {
 			System.out.print("Altura: ");
 			double height = sc.nextDouble();
 			sc.nextLine();
-			vetPessoa[i] = new Pessoa(name, age, height);
+			vetPessoa[i] = new Person(name, age, height);
 			soma += vetPessoa[i].getHeight();
 			if (vetPessoa[i].getAge() < 16) {
 				countIdadeMenorDezesseis += 1;
