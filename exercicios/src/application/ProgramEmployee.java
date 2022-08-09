@@ -40,7 +40,7 @@ public class ProgramEmployee {
 		System.out.println();
 		System.out.print("Enter the employee id that will have salary increase: ");
 		int id = sc.nextInt();
-		if (employees.indexOf(id) == -1) {
+		if (employees.stream().filter(x -> x.getId() == id).findFirst().orElse(null) == null) {
 			System.err.println("Id not found");
 		} else {
 			System.out.print("Enter the percentage: ");
