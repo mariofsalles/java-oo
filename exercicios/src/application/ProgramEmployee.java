@@ -44,7 +44,7 @@ public class ProgramEmployee {
 			System.err.println("Id not found");
 		} else {
 			System.out.print("Enter the percentage: ");
-			double percentage = sc.nextInt();
+			double percentage = sc.nextDouble();
 			Employee employeeIncreased = employees.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
 			employeeIncreased.increaseSalary(percentage);
 		}
