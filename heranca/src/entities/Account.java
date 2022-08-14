@@ -1,11 +1,11 @@
 package entities;
 
 public class Account {
-	
+
 	private Integer number;
 	private String holder;
 	protected Double balance;
-	
+
 	public Account() {
 	}
 
@@ -34,11 +34,11 @@ public class Account {
 	public Double getBalance() {
 		return balance;
 	}
-	
+
 	public void withdraw(double value) {
-		balance -= value;
+		balance -= value + 5.0;
 	}
-	
+
 	public void deposit(double value) {
 		balance += value;
 	}

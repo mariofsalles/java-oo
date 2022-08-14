@@ -4,7 +4,7 @@ import entities.Account;
 import entities.BusinessAccount;
 import entities.SavingsAccount;
 
-public class Program {
+public class ProgramDowUpCasting {
 	
 	public static void main(String args[]) {
 		
