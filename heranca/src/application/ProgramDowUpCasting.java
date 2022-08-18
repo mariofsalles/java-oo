@@ -8,7 +8,8 @@ public class ProgramDowUpCasting {
 	
 	public static void main(String args[]) {
 		
-		Account acc = new Account(1001, "Alex", 0.00);
+//		Account acc = new Account(1001, "Alex", 0.00);
+		
 		BusinessAccount bacc = new BusinessAccount(1002, "Maria", 0.00, 500.00);
 		
 		// Upcasting
