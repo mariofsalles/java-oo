@@ -1,6 +1,5 @@
 package application;
 
-import java.awt.print.Printable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
